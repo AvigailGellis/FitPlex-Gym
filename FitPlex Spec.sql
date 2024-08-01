@@ -1,4 +1,4 @@
-	I run a weight loss gym called FitPlex Gym, and I need a single table to track all relative data about members, their progress, workout sessions, and memberships. This will help us monitor individual progress, manage workout sessions, and keep track of memberships." 
+/*	I run a weight loss gym called FitPlex Gym, and I need a single table to track all relative data about members, their progress, workout sessions, and memberships. This will help us monitor individual progress, manage workout sessions, and keep track of memberships." 
 I heard that you can help!
 
 	I need to record the name of all members, their contact details (7 digit phone number with a dash after the first three digits), initial weight, goal weight, current weight, BMI. I also need the membership start and end dates, membership type, and  payment status. I would also like to have a record of each session date and session time.
@@ -72,7 +72,7 @@ Sample data:
 	Payment status: Paid, Paid, Not Paid, Paid
 
 
-
+*/
 
 	
 
