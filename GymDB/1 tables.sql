@@ -18,7 +18,8 @@ create table dbo.Member(
     MembershipEndDate date not null,
     MembershipType varchar(20) not null constraint ck_Member_MembershipType_must_be_either_annual_semiannual_monthly_or_quarterly check(MembershipType in ('Annual', 'Semi-annual', 'Monthly', 'Quarterly')),
     PaymentStatus bit not null,
-    SessionDateAndTime datetime not null,
+    SessionDate date not null,
+    SessionTime time not null,
     constraint ck_Member_MembershipStartDate_is_before_MembershipEndDate check(MembershipStartDate < MembershipEndDate)
 )
 go
