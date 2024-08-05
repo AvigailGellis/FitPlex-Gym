@@ -13,6 +13,7 @@ create table dbo.Member(
     InitialWeight int not null constraint ck_Member_InitialWeight_must_be_greater_than_zero check(InitialWeight > 0),
     GoalWeight int not null constraint ck_Member_GoalWeight_must_be_greater_than_zero check(GoalWeight > 0),
     CurrentWeight int not null constraint ck_Member_CurrentWeight_must_be_greater_than_zero check(CurrentWeight > 0),
+    WeightLoss as InitialWeight - CurrentWeight persisted,
     BMI decimal(4, 1) not null constraint ck_Member_BMI_must_be_greater_than_zero check(BMI > 0),
     MembershipStartDate date not null constraint ck_Member_MembershipStartDate_must_be_after_december_1st_2022 check(MembershipStartDate >= '2022-12-01'),
     MembershipEndDate date not null,

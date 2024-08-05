@@ -11,10 +11,10 @@ select NumberOfMembers = count(*), 'Paid/NotPaid' = case when m.PaymentStatus = 
 from Member m 
 group by m.PaymentStatus, m.MembershipType
 --4) I would like to check in on the overall effectiveness of our gym's weight loss program. Please provide a list of all members 	and their progress, sorted by the amount of weight loss in desc order. 
-select m.FirstName, m.LastName, WeightLoss = m.InitialWeight - m.CurrentWeight
+select m.FirstName, m.LastName, m.WeightLoss
 from Member m 
 order by WeightLoss desc
 --5) I would like to see the difference in progress made by members in different membership categories. Please show me the average 	weight loss per membership type.
-select AvgWeightLoss = avg(m.InitialWeight - m.CurrentWeight), m.MembershipType
+select AvgWeightLoss = avg(m.WeightLoss), m.MembershipType
 from Member m 
 group by m.MembershipType
